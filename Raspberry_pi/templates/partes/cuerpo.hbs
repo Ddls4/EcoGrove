@@ -1,0 +1,42 @@
+<div class="col-12 col-xl-8 col-lg-8 col-md-7 mt-5">
+  <!-- Necesita --> 
+  <h1 class="text-center"> Seleccione los valores </h1>
+  <div class="row justify-content-around">
+                    <!-- Columna Humedad -->
+                    <div class="col-5">
+                      <h3 for="customRange1" class="form-label" >Humedad: <span id = "para1">50</span></h3>
+                      <div> 
+                        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange1"  onclick="changeImage()">
+                      </div>
+                    </div>
+                    <!-- Columna Temperatura -->
+                    <div class="col-5">
+                      <h3 for="customRange1" class="form-label" >Temperatura: <span id = "para1"></span>50</h3>
+                      <div> 
+                        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange1"  onclick="changeImage()">
+                      </div>
+                    </div>
+  </div>
+  <script>
+    var para1 = document.getElementById("para1");
+    function changeImage() {
+      var customRange1 = document.getElementById("customRange1");
+      var enteredText = customRange1.value;
+      para1.innerText = enteredText;
+    }
+  </script>
+  <!-- Tienes -->
+  <div class="col-12 mt-4">
+    <div>
+      <h1 class="text-center">Medidas</h1>
+        <div class="row justify-content-around">
+          <div class="col-5">
+            <h3> Humedad: {{humedad}}%   </h3>
+          </div>
+          <div class="col-5">
+            <h3> Temperatura: {{Temperatura}}°C </h3> 
+          </div>
+        </div>
+    </div>
+  </div>
+</div>   

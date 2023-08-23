@@ -1,0 +1,49 @@
+La página web ha pasado por varias etapas.
+
+La primera versión fue creada con Tkinter esta era en blanco y negro y estaba programada 
+con Python. Vimos que esta opción está muy limitada a la computadora creadora y que queríamos 
+que funcionara tanto en PC y Teléfono.
+
+Con esta idea nacería la idea de usar flack y crear una página web esta está en Html y Css.
+Con esto en mete usamos el framework de bootsrap para crear el apartado visual de la página.
+
+    Agregamos sub-divicion de codigo y una base de datos. Ya que la idea original se expandio.
+Tenemos en mente darle a nuestro proyecto excalabilidad al poder agreagar un login y que puedas
+sincronizar tu cuenta con una planta dandole la capacidad de que podamos tener mas de 1 invern-
+aculo.
+
+    El codigo del proyecto esta dividido en seciones estas son main.py esta contiene el archivo
+principal y es la que levanta la pagina. Por otro lado index.hbs es la parte visual del proyecto
+este contiene el codigo HTML que se vera en la pagina web, este tiene varias partes que son 
+navbar.hbs, menu.hbs, cuerpo.hbs, footer.hbs y login.hbs.
+
+02/08/2023
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Servidor</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS propio  -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+    <!-- recurso necesario para usar Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body data-bs-spy="scroll" style="background-color: #198754">
+    {% include "partes/navbar.hbs" %}
+    <div class="container-xxl mt-3 my-md-4">
+        <div class="row col-12 d-flex align-content-between" >
+            {% include "partes/menu.hbs"%}
+            {% include "partes/cuerpo.hbs" %}
+              
+        </div>
+    </div>
+    <!-- {% include "partes/login.hbs" %}  -->
+    {% include "partes/footer.hbs" %}
+
+    <!--  Script para bootstraper  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--  Cosas para agregar
+  https://getbootstrap.com/docs/5.3/components/button-group/
+ -->
+<nav class="navbar navbar-dark" style="background-color: #0f5132">
+    <div class="container-fluid">
+      <a class="navbar-brand">EcoGrove</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarexpand" aria-controls="navbarexpand" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse" id="navbarexpand" data-bs-theme="dark">
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Opciones</h5>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <div class="btn-group dropend">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropend
+                </button>
+                <ul id="Color" class="dropdown-menu">
+                  <li><button id="Rojo">Rojo</button></li>
+                  <li><button id="Azul">Azul</button></li>
+                 
+                </ul>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="/en">Idioma</a>
+              </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script style="background-color: rgb(8, 0, 254);">
+    function Color(){
+   
+      switch (Color_gran){
+        case "Rojo":
+          document.body.style.backgroundColor= "red";
+          break;
+        case "Azul":
+          document.body.style.backgroundColor= "rgb(0, 0, 255)";
+          break;
+        default:
+          document.body.style.backgroundColor= "green";
+          break;
+      }
+
+    }
+  </script>

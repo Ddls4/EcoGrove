@@ -1,0 +1,70 @@
+<!-- https://stackoverflow.com/questions/22858872/changing-image-with-dropdown-menu -->
+
+<div class="col-12 col-xl-4 col-lg-4 col-md-5">
+  <!--Selector de verduras  -->
+  <div class="dropdown text-center">
+    <select id="Verdura"  onchange="showDescrption()" class="btn btn-secondary dropdown-toggle mt-3">
+      <option value=""> --Seleccionar una verdura-- </option>
+      <!-- Otoño  -->
+      <option value="Lechuga">Lechuga</option>
+      <option value="Ajo">Ajo</option>
+      <!-- Primavera  -->
+      <option value="Papa">Papa</option>
+      <option value="Morron">Morrón</option>
+      <!-- Verano  -->
+      <option value="Repollo">Repollo</option>
+      <option value="Remolacha">Remolacha</option>
+      <!-- Invierno  -->
+      <option value="Espinaca">Espinaca</option>
+      <option value="Acelga">Acelga</option>
+      <!-- Otro  -->
+      <option value="Zanaoria">Zanaoria</option>
+      
+    </select>
+    <div>
+      <div class="card mx-auto justify-content-center" style="width: 18rem;">
+        <img id="preview" class="card-img-top" alt="..." height="200px">    
+        <div class="card-body">
+          <h5 class="card-title">Descripción</h5>
+          <p id="descripcion">Al elegir algo se mostrara la descripcion</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- HTML que contiene /  La Imagen con descripcion  -->
+
+  <!--                 Descripciones                      -->
+  <script> 
+    function showDescrption(){
+      var Verdura = document.getElementById("Verdura").value;
+      var descripcion = "";
+      var preview = "";
+      
+      switch (Verdura){
+        case "Papa":
+          preview = "https://elcomercio.pe/resizer/hty6NbG9qe9kPobUETF5V8EMNfs=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/6RY2RVYXSRHTLD4ZX2FZHNZZOA.jpg";
+          descripcion = "La papa es considerada una planta termoperiódica, es decir, necesita una variación de las temperaturas entre el día y la noche. Dicha variación debe ser entre 10 a 25 ºC en el aire. La temperatura del suelo adecuada para el desarrollo de tubérculos debe ser de 10 a 16 ºC durante la noche y de 16 a 22 ºC en el día.";
+          break;
+        case "Zanaoria":
+          preview = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Carotts_%28Daucus_Carotta%29.jpg/220px-Carotts_%28Daucus_Carotta%29.jpg"
+          descripcion = "Las Zanaorias";
+          break;
+        case "Ajo":
+          preview = "https://fagro.mx/img/cultivos/ajo.png"
+          descripcion = "Los ajos";
+          break;
+        default:
+          preview ="https://www.elmueble.com/medio/2019/03/25/monstera_f97f4746_800x800.jpg";
+          descripcion ="Al elegir algo se mostrara la descripcion";
+          break;
+      }
+      document.getElementById("descripcion").innerHTML = descripcion;
+      document.getElementById("preview").src = preview;
+    }
+  </script>
+  </div>
+</div>
+
+
+ 
+
