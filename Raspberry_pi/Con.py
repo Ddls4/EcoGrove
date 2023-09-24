@@ -12,6 +12,9 @@ mqtt = Mqtt(app)
 @app.route('/')
 def index():
     return render_template("index.hbs")
+@app.route('/en')
+def Español():
+    return render_template('index_EN.html')
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):
