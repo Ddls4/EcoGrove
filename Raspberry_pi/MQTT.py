@@ -7,7 +7,6 @@ broker = "test.mosquitto.org"
 port = 1883
 topic = "Python"
 
-
 # MQTT
 def on_message(client, userdata, msg):
     print("Mensaje recivido:")
