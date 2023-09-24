@@ -10,6 +10,7 @@ def rand():
     global Temperatura
     humedad = random.randrange(50,80)
     Temperatura = random.randrange(0,40) 
+    
 #   inciar la pagina principal 
 @servidor.route("/")
 def inicio():
