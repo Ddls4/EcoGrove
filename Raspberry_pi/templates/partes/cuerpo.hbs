@@ -2,27 +2,35 @@
   <!-- Necesita --> 
   <h1 class="text-center"> Seleccione los valores </h1>
   <div class="row justify-content-around">
-                    <!-- Columna Humedad -->
-                    <div class="col-5">
-                      <h3 for="customRange1" class="form-label" >Humedad: <span id = "para1">50</span></h3>
-                      <div> 
-                        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange1"  onclick="changeImage()">
-                      </div>
-                    </div>
-                    <!-- Columna Temperatura -->
-                    <div class="col-5">
-                      <h3 for="customRange1" class="form-label" >Temperatura: <span id = "para1"></span>50</h3>
-                      <div> 
-                        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange1"  onclick="changeImage()">
-                      </div>
-                    </div>
+    <!-- Columna Humedad -->
+    <div class="col-5">
+      <h3 for="customRange1" class="form-label" >Humedad: <span id = "Humedad_Ran">50</span></h3>
+      <div> 
+        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange1"  onclick="changeImage()">
+      </div>
+    </div>
+    <!-- Columna Temperatura -->
+    <div class="col-5">
+      <h3 for="customRange2" class="form-label" >Temperatura: <span id = "Temperatura_Ran">50</span></h3>
+      <div> 
+        <input type="range" class="form-range w-100"  min="0" max="100" step="5" id="customRange2"  onclick="changeImage2()">
+      </div>
+    </div>
   </div>
   <script>
-    var para1 = document.getElementById("para1");
+    // Humedad
+    var Humedad_Ran = document.getElementById("Humedad_Ran");
     function changeImage() {
       var customRange1 = document.getElementById("customRange1");
       var enteredText = customRange1.value;
-      para1.innerText = enteredText;
+      Humedad_Ran.innerText = enteredText;
+    }
+    // Temperatura
+    var Temperatura_Ran = document.getElementById("Temperatura_Ran");
+    function changeImage2() {
+      var customRange2 = document.getElementById("customRange2");
+      var enteredText2 = customRange2.value;
+      Temperatura_Ran.innerText = enteredText2;
     }
   </script>
   <!-- Tienes -->
