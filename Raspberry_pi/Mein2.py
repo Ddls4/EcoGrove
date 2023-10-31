@@ -18,7 +18,8 @@ def Español():
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):
-    mqtt.subscribe('Python')
+    mqtt.subscribe('luces')
+
 
 @mqtt.on_message()
 def handle_mqtt_message(client, userdata, message):
