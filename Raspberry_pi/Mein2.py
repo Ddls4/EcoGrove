@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_mqtt import Mqtt
 
 app = Flask(__name__)
@@ -15,6 +15,21 @@ def index():
 @app.route('/en')
 def Español():
     return render_template('index_EN.html')
+
+@app.route("/slider", methods=["POST"])
+def slider():
+    # Obtener el valor del slider
+    value = request.form.get("value")
+    print(value)
+
+    return "El valor del slider se publicó correctamente"
+@app.route("/slider2", methods=["POST"])
+def slider():
+    # Obtener el valor del slider
+    value = request.form.get("value2")
+    print(value)
+
+    return "El valor del slider se publicó correctamente"
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):
