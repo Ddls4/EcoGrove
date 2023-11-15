@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from flask_mqtt import Mqtt
 
 app = Flask(__name__)
+# Configuracion de MQTT
 app.config['MQTT_BROKER_URL'] = 'test.mosquitto.org'
 app.config['MQTT_BROKER_PORT'] = 1883
 app.config['MQTT_USERNAME'] = ''
