@@ -1,2 +1,2 @@
 usuario = "robotica"#"3BF"
-contra = "R0botica"#"Roboutu12345"
+contra = "R01bot1ca123"#"Roboutu12345"
